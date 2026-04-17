@@ -1,0 +1,17 @@
+*
+!readme.md
+!.gitignore
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/theme_1
+!wp-content/themes/theme_1/*
+!wp-content/themes/theme_1/**/*
+wp-content/themes/theme_1/node_modules
+wp-content/themes/theme_1/public
+wp-content/themes/theme_1/public/*
+node_modules
+!postcss.config.js
+!vite.config.js
+!package.json
