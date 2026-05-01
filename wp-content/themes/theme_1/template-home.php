@@ -48,62 +48,77 @@ $third_number_second_section = get_field("third_number_second_section");
 ?>
     <h1><?= $title_homepage ?></h1>
 
-    <section>
-        <h2><?= $title_first_mission ?></h2>
-        <p><?= $text_first_mission ?></p>
-        <p><?= $number_first_mission ?></p>
-    </section>
+    <div class="missions">
+        <section class="mission">
+            <h2 class="mission__title"><?= $title_first_mission ?></h2>
+            <p class="mission__text"><?= $text_first_mission ?></p>
+                <span class="mission__number"><?= $number_first_mission ?></span>
 
-    <section>
-        <h2><?= $title_second_mission ?></h2>
-        <p><?= $text_second_mission ?></p>
-        <p><?= $number_second_mission ?></p>
-    </section>
+        </section>
 
-    <section>
-        <h2><?= $title_third_mission ?></h2>
-        <p><?= $text_third_mission ?></p>
-        <p><?= $number_third_mission ?></p>
-    </section>
+        <section class="mission">
+            <h2 class="mission__title"><?= $title_second_mission ?></h2>
+            <p class="mission__text"><?= $text_second_mission ?></p>
+            <span class="mission__number"><?= $number_second_mission ?></span>
+        </section>
 
-    <section>
-        <h2><?= $title_fourth_mission ?></h2>
-        <p><?= $text_fourth_mission ?></p>
-        <p><?= $number_fourth_mission ?></p>
-    </section>
+        <section class="mission">
+            <h2 class="mission__title"><?= $title_third_mission ?></h2>
+            <p class="mission__text"><?= $text_third_mission ?></p>
+            <span class="mission__number"><?= $number_third_mission ?></span>
+        </section>
 
-    <section>
+        <section class="mission">
+            <h2 class="mission__title"><?= $title_fourth_mission ?></h2>
+            <p class="mission__text"><?= $text_fourth_mission ?></p>
+            <span class="mission__number"><?= $number_fourth_mission ?></span>
+        </section>
+    </div>
+
+    <section class="section__container">
         <img src="<?= $image_first_section['url'] ?>"
              alt="<?= $image_first_section['alt'] ?>"
              width="<?= $image_first_section['width'] ?>"
              height="<?= $image_first_section['height'] ?>"
         >
 
-        <div>
-            <h2><?= $first_section_title ?></h2>
-            <p><?= $first_text_first_section ?></p>
-            <p><?= $first_number_first_section ?></p>
-            <p><?= $second_text_first_section ?></p>
-            <p><?= $second_number_first_section ?></p>
-            <p><?= $third_text_first_section ?></p>
-            <p><?= $third_number_first_section ?></p>
+        <div class="section__contents">
+            <h2 class="section__title"><?= $first_section_title ?></h2>
+            <div class="section__content">
+                <p class="section__number"><?= $first_number_first_section ?></p>
+                <p><?= $first_text_first_section ?></p>
+            </div>
+            <div class="section__content">
+                <p class="section__number"><?= $second_number_first_section ?></p>
+                <p><?= $second_text_first_section ?></p>
+            </div>
+            <div class="section__content">
+                <p class="section__number"><?= $third_number_first_section ?></p>
+                <p><?= $third_text_first_section ?></p>
+            </div>
         </div>
     </section>
-    <section>
+    <section class="section__container">
+        <div class="section__contents">
+            <h2 class="section__title"><?= $second_section_title ?></h2>
+            <div class="section__content">
+                <p class="section__number"><?= $first_number_second_section ?></p>
+                <p><?= $first_text_second_section ?></p>
+            </div>
+            <div class="section__content">
+                <p class="section__number"><?= $second_number_second_section ?></p>
+                <p><?= $second_text_second_section ?></p>
+            </div>
+            <div class="section__content">
+                <p class="section__number"><?= $third_number_second_section ?></p>
+                <p><?= $third_text_second_section ?></p>
+            </div>
+        </div>
         <img src="<?= $image_second_section['url'] ?>"
              alt="<?= $image_second_section['alt'] ?>"
              width="<?= $image_second_section['width'] ?>"
              height="<?= $image_second_section['height'] ?>"
         >
-        <div>
-            <h2><?= $second_section_title ?></h2>
-            <p><?= $first_text_second_section ?></p>
-            <p><?= $first_number_second_section ?></p>
-            <p><?= $second_text_second_section ?></p>
-            <p><?= $second_number_second_section ?></p>
-            <p><?= $third_text_second_section ?></p>
-            <p><?= $third_number_second_section ?></p>
-        </div>
     </section>
 
 <?php get_footer(); ?>
