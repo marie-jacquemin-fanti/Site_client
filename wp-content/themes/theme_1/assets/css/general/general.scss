@@ -9,3 +9,101 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+body {
+  font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+}
+
+.buttons {
+  background-color: #2D0C1F;
+  color: #F33EAA;
+  padding: 0.813rem 1.25rem;
+
+  font-family: var(--font-family-alberSansLight), sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+
+  transition: background-color 0.35s ease,
+  color 0.35s ease,
+  transform 0.2s ease;
+
+  &:hover {
+    background-color: #F33EAA;
+    color: #2D0C1F;
+  }
+}
+
+h1 {
+  font-size: 6.25rem;
+  background-color: #4B8A7F;
+  padding: 7.5rem 11.438rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+}
+
+.missions {
+  display: flex;
+  justify-content: center;
+}
+
+.mission {
+  background-color: #E9F1E4;
+  margin: 7.5rem auto;
+  padding: 1.875rem 1.75rem;
+  filter: drop-shadow(12px 12px 4px rgba(56, 56, 56, 0.25));
+
+  max-width: 238px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__title {
+    font-size: 2.188rem;
+    padding: 0 0 19px 0;
+    border-bottom: 1px solid black;
+  }
+
+  &__text {
+    padding-top: 25px;
+    text-align: center;
+  }
+}
+
+.mission__number, .section__number {
+  color: white;
+  background-color: #4B8A7F;
+  border-radius: 50%;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+}
+
+.section__container {
+  display: flex;
+  justify-content: center;
+}
+
+.section__contents {
+  max-width: 758px;
+  width: 100%;
+}
+
+.section__content {
+  display: flex;
+  align-items: center;
+}
+
+.section__title {
+  font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+  font-size: 2.188rem;
+}
