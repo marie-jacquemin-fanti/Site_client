@@ -1,0 +1,18 @@
+:root {
+  --font-family-arial: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+  --font-family-funnel: "Funnel", Arial, sans-serif;
+
+  --color-light-green: #E9F1E4;
+  --color-green: #d4e8cc;
+  --color-dark-green: #4B8A7F;
+  --color-white: #FFFFFF;
+}
+
+@font-face {
+  src: url('../../../assets/fonts/FunnelDisplay-Light.ttf') format('TrueType');
+  font-family: 'Funnel';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200;
+}
+
