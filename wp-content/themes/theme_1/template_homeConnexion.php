@@ -21,6 +21,10 @@ $step_description_2 = get_field('step_description_2');
 $step_description_3 = get_field('step_description_3');
 $step_description_4 = get_field('step_description_4');
 
+$team_title = get_field('team_title');
+$team_text = get_field('team_text');
+$team_link = get_field('team_link');
+
 $informations_utiles = get_field('informations_utiles');
 $information_title_1 = get_field('information_title_1');
 $information_link_1 = get_field('information_link_1');
@@ -41,9 +45,11 @@ $sensibilisation_link_3 = get_field('sensibilisation_link_3');
 
 <?php get_header(); ?>
 
-<?php if ($deconnexion_button): ?>
-    <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
-<?php endif; ?>
+    <div class="deconnexion-buttons">
+        <?php if ($deconnexion_button): ?>
+            <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
+        <?php endif; ?>
+    </div>
 
 <?php if ($title_connexion_plai): ?>
     <h1><?= $title_connexion_plai ?></h1>
@@ -111,7 +117,20 @@ $sensibilisation_link_3 = get_field('sensibilisation_link_3');
                 <?php endif; ?>
             </ul>
         </section>
+        <!-- TODO : Make the section équipe plai -->
+        <section class="home-plai__section home-plai__section--sensibilisations">
 
+            <?php if ($team_title): ?>
+            <h2 class="home-plai__title"><?= $team_title ?>
+                </h2>
+                    <?php endif; ?>
+                    <?php if ($team_text): ?>
+                        <?php if ($team_link): ?>
+                            <p class="home-plai__text"><?= $team_text ?> <a class="home-plai__link" href="<?= $team_link['url'] ?>"><?= $team_link['title'] ?></a></p>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
+        </section>
 
         <!-- Information utiles -->
         <section class="home-plai__section home-plai__section--infos">
@@ -191,5 +210,6 @@ $sensibilisation_link_3 = get_field('sensibilisation_link_3');
 
             </ul>
         </section>
+
     </div>
 <?php get_footer(); ?>
