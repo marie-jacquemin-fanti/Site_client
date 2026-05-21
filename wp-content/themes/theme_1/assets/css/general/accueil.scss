@@ -3,8 +3,8 @@
   justify-content: flex-end;
   margin: 2rem;
 }
-@media screen and (min-width: 1024px) {
 
+@media screen and (min-width: 1024px) {
   .missions {
     display: flex;
     justify-content: center;
@@ -17,14 +17,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     background: linear-gradient(135deg, var(--color-light-green) 0%, var(--color-green) 100%);
     margin: 4rem auto;
     padding: 2rem;
     gap: 2rem;
-
-
-    border-left: 6px solid var( --color-dark-green);
+    border-left: 6px solid var(--color-dark-green);
     border-radius: 12px;
     filter: drop-shadow(12px 12px 4px rgba(56, 56, 56, 0.25));
     flex: 1;
@@ -43,14 +40,14 @@
     }
   }
 
-  .mission__number, .section__number {
+  .mission__number,
+  .section__number {
     color: white;
-    background-color: var( --color-dark-green);
+    background-color: var(--color-dark-green);
     border-radius: 50%;
     text-align: center;
     width: 44px;
     height: 44px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +67,7 @@
       object-fit: cover;
       border-radius: 8px;
       flex-shrink: 0;
-      border: 1px solid var( --color-dark-green);
+      border: 1px solid var(--color-dark-green);
     }
   }
 
@@ -94,7 +91,181 @@
 }
 
 @media screen and (max-width: 1024px) and (min-width: 600px) {
+  .missions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centre les cartes */
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    background: linear-gradient(135deg, var(--color-light-green) 0%, var(--color-green) 100%);
+    padding: 2rem;
+    gap: 2rem;
+    border-left: 6px solid var(--color-dark-green);
+    border-radius: 12px;
+    filter: drop-shadow(12px 12px 4px rgba(56, 56, 56, 0.25));
+    text-align: center;
+
+    &__title {
+      font-size: 2.188rem;
+      padding: 0 0 19px 0;
+      border-bottom: 1px solid black;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+      line-height: 1.5rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .mission__number, .section__number {
+    color: white;
+    background-color: var(--color-dark-green);
+    border-radius: 50%;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 3rem;
+
+    img {
+      width: 45%;
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      border: 1px solid var(--color-dark-green);
+    }
+  }
+
+  .section__contents {
+    max-width: 758px;
+    width: 100%;
+  }
+
+  .section__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .section__title {
+    font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
 }
 
 @media (max-width: 600px) {
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+  .missions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centre les cartes */
+    gap: 0;
+    padding: 0 1rem;
+  }
+
+  .mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;
+    width: 70%;
+    max-width: 600px;  /* limite sur grand écran */
+    background: linear-gradient(135deg, var(--color-light-green) 0%, var(--color-green) 100%);
+    padding: 2rem;
+    gap: 2rem;
+    border-left: 6px solid var(--color-dark-green);
+    border-radius: 12px;
+    filter: drop-shadow(12px 12px 4px rgba(56, 56, 56, 0.25));
+    text-align: center;
+
+    &__title {
+      font-size: 1.5rem;
+      padding: 0 0 19px 0;
+      border-bottom: 1px solid black;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+      line-height: 1.5rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .mission__number, .section__number {
+    color: white;
+    background-color: var(--color-dark-green);
+    border-radius: 50%;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: none;
+    }
+  }
+
+  .section__contents {
+    max-width:100%;
+  }
+
+  .section__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .section__title {
+    font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
 }
