@@ -42,7 +42,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-family: var(--font-family-funnel), sans-serif;
+    font-family: var(--font-family-funnelSans), sans-serif;
     font-weight: lighter;
     font-size: 6.25rem;
     background-color: var( --color-dark-green);
@@ -56,7 +56,7 @@ body {
 
 @media screen and (max-width: 1024px) and (min-width: 600px) {
   h1 {
-    font-family: var(--font-family-funnel), sans-serif;
+    font-family: var(--font-family-funnelSans), sans-serif;
     font-weight: lighter;
     font-size: 5rem;
     background-color: var( --color-dark-green);
@@ -69,7 +69,7 @@ body {
 }
 @media (max-width: 600px) {
   h1 {
-    font-family: var(--font-family-funnel), sans-serif;
+    font-family: var(--font-family-funnelSans), sans-serif;
     font-weight: lighter;
     font-size: 2.5rem;
     background-color: var( --color-dark-green);
