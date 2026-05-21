@@ -49,8 +49,10 @@ $second_number_second_section = get_field("second_number_second_section");
 $third_text_second_section = get_field("third_text_second_section");
 $third_number_second_section = get_field("third_number_second_section");
 ?>
-    <a class="buttons" href="<?= $button_falc['url'] ?>"><?= $button_falc['title'] ?></a>
-    <a class="buttons" href="<?= $button_identification['url'] ?>"><?= $button_identification['title'] ?></a>
+    <div class="home-buttons">
+        <a class="buttons" href="<?= $button_falc['url'] ?>"><?= $button_falc['title'] ?></a>
+        <a class="buttons" href="<?= $button_identification['url'] ?>"><?= $button_identification['title'] ?></a>
+    </div>
     <h1><?= $title_homepage ?></h1>
 
     <div class="missions">

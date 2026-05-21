@@ -3,7 +3,7 @@ import {globSync} from "glob";
 import fs from "fs";
 
 export default defineConfig({
-  base: "/wp-content/themes/dw/public/",
+  base: "/wp-content/themes/theme_1/public/",
   plugins: [
     {
       name: 'bundle-js',
