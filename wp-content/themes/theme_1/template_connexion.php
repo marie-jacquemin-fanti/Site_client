@@ -40,7 +40,7 @@ $scolaire_mail = get_field('scolaire_mail');
         </div>
         <div class="form-buttons">
             <?php if ($identification_acces): ?>
-                <a class="form-button"
+                <a class="form-button_valid"
                    href="<?= $identification_acces['url'] ?>"><?= $identification_acces['title'] ?></a>
             <?php endif; ?>
             <?php if ($scolaire_mail): ?>

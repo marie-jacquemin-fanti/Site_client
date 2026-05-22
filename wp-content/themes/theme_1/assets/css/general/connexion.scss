@@ -13,6 +13,29 @@ input[type=number] {
   justify-content: center;
 }
 
+.form-button_valid{
+  background-color: #F33EAA;
+  color: #2D0C1F;
+  padding: 0.813rem 1.25rem;
+
+  font-family: var(--font-family-alberSansLight), sans-serif;
+  text-decoration: none;
+  margin: 0 1rem;
+  display: block;
+  width: fit-content;
+  font-size: 1.25rem;
+
+  transition: background-color 0.35s ease,
+  color 0.35s ease,
+  transform 0.2s ease;
+  &:hover {
+    background-color: #ffaddb;
+    color: var(--color-black-pink);
+  }
+}
+
+
+
 
 
 @media screen and (min-width: 1024px) {
@@ -27,6 +50,7 @@ input[type=number] {
     font-size: 1.2rem;
     line-height: 1.9rem;
     color: #222;
+    padding-top: 4rem;
     text-align: center;
     margin: 0 auto;
     width: 55%;
