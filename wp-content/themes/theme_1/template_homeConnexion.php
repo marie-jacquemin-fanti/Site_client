@@ -45,15 +45,13 @@ $sensibilisation_link_3 = get_field('sensibilisation_link_3');
 
 <?php get_header(); ?>
 
-    <div class="deconnexion-buttons">
+    <div class="all-buttons">
         <?php if ($deconnexion_button): ?>
             <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
         <?php endif; ?>
     </div>
 
-<?php if ($title_connexion_plai): ?>
-    <h1><?= $title_connexion_plai ?></h1>
-<?php endif; ?>
+    <h1>Bienvenue Sur <span>Votre</span> Espace PLAI</h1>
 
     <!-- Référent -->
     <div class="home-plai">

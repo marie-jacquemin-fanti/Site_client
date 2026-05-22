@@ -8,11 +8,14 @@ $whitout_scolaire_mail = get_field('whitout_scolaire_mail');
 $fase_number_identification = get_field('fase_number_identification');
 $scolaire_mail = get_field('scolaire_mail');
 ?>
-<div class="back-buttons">
-    <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
+<div class="all-buttons">
+    <div class="back-buttons">
+        <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
+    </div>
 </div>
-
-<p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la première fois une vérification sera
+    <h1>S'<span>identifier</span></h1>
+<p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la première fois une
+    vérification sera
     effectuer avant de pouvoir y accéder.</p>
 
 <form class="form" action="<?= admin_url('admin-post.php'); ?>" method="POST">
@@ -41,3 +44,4 @@ $scolaire_mail = get_field('scolaire_mail');
         <?php endif; ?>
     </div>
 </form>
+<?php get_footer() ?>
