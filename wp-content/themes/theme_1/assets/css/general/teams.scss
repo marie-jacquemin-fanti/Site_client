@@ -1,0 +1,77 @@
+.equipes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.equipe {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  border: 0.5px solid var(--color-green);
+  overflow: hidden;
+
+  &__header {
+    background-color: var(--color-dark-green);
+    padding: 1rem 1.25rem;
+  }
+
+  &__titre {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-light-green);
+  }
+
+  &__membres {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background-color: var(--color-green);
+  }
+
+  &__membre {
+    background-color: var(--color-white);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    text-align: center;
+  }
+
+  &__avatar {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
+    border-radius: 50%;
+    background-color: var(--color-light-green);
+    border: 2px solid var(--color-dark-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--color-dark-green);
+    flex-shrink: 0;
+  }
+
+  &__nom {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  &__specialite {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--color-dark-green);
+  }
+}
+
+@media (max-width: 600px) {
+  .equipe__membres {
+    grid-template-columns: 1fr;
+  }
+}

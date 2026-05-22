@@ -8,11 +8,16 @@ $identification_acces = get_field('identification_acces');
 $scolaire_mail = get_field('scolaire_mail');
 ?>
 <div class="body-form">
-    <div class="back-buttons">
-        <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
+    <div class="all-buttons">
+        <div class="back-buttons">
+            <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
+        </div>
     </div>
 
-    <p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la premier fois une vérification
+        <h1>Demande d'<span>accée</span></h1>
+
+    <p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la premier fois
+        une vérification
         sera
         effectuer avant de pouvoir y accéder.</p>
 
@@ -35,7 +40,8 @@ $scolaire_mail = get_field('scolaire_mail');
         </div>
         <div class="form-buttons">
             <?php if ($identification_acces): ?>
-                <a class="form-button" href="<?= $identification_acces['url'] ?>"><?= $identification_acces['title'] ?></a>
+                <a class="form-button"
+                   href="<?= $identification_acces['url'] ?>"><?= $identification_acces['title'] ?></a>
             <?php endif; ?>
             <?php if ($scolaire_mail): ?>
                 <a class="form-button" href="<?= $scolaire_mail['url'] ?>"><?= $scolaire_mail['title'] ?></a>
