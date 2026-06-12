@@ -1,6 +1,32 @@
 <?php
 
 include('core/theme/configuration.php');
+
+function dw_get_navigation_links(string $location): array
+{
+    // Récupérer l'objet W¨pour le menu
+    $locations = get_nav_menu_locations();
+
+    if (!isset($locations[$location])) {
+        return [];
+    }
+
+    $nav_id = $locations[$location];
+    $nav = wp_get_nav_menu_items($nav_id);
+
+    // Transformer le menu en tableau de liens, chaque lien va être un objet personnalisé
+    $links = [];
+
+    foreach ($nav as $post) {
+        $link = new stdClass();
+        $link->href = $post->url;
+        $link->label = $post->title;
+
+        $links[] = $link;
+    }
+
+    return $links;
+}
 function dw_asset(string $file): string
 {
     $manifest_path = get_theme_file_path('public/.vite/manifest.json');
@@ -15,6 +41,21 @@ function dw_asset(string $file): string
     }
     return '';
 }
+function register_sensibilisation_cpt() {
+    register_post_type('sensibilisation', [
+        'labels' => [
+            'name'          => 'Sensibilisations',
+            'singular_name' => 'Sensibilisation',
+            'add_new_item'  => 'Ajouter une sensibilisation',
+        ],
+        'public'       => true,
+        'show_in_menu' => true,
+        'supports'     => ['title'],
+        'menu_icon'    => 'dashicons-heart',
+    ]);
+}
+add_action('init', 'register_sensibilisation_cpt');
+
 
 
 

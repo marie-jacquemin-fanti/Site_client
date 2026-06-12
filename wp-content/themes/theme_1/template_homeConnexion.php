@@ -41,6 +41,7 @@ $sensibilisation_link_2 = get_field('sensibilisation_link_2');
 $sensibilisation_title_3 = get_field('sensibilisation_title_3');
 $sensibilisation_text_3 = get_field('sensibilisation_text_3');
 $sensibilisation_link_3 = get_field('sensibilisation_link_3');
+$sensibilisation_more = get_field('sensibilisation_more');
 ?>
 
 <?php get_header(); ?>
@@ -205,8 +206,14 @@ $sensibilisation_link_3 = get_field('sensibilisation_link_3');
                         </a>
                     <?php endif; ?>
                 </li>
-
             </ul>
+            <p>
+                <?php if ($sensibilisation_more): ?>
+                    <a class="home-plai__link" href="<?= $sensibilisation_more['url'] ?>">
+                        <?= $sensibilisation_more['title'] ?>
+                    </a>
+                <?php endif; ?>
+            </p>
         </section>
 
     </div>
