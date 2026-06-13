@@ -71,6 +71,12 @@
 }
 
 @media (max-width: 600px) {
+  .equipes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 4rem;
+  }
   .equipe__membres {
     grid-template-columns: 1fr;
   }
