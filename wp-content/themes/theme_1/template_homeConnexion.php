@@ -45,7 +45,12 @@ $sensibilisation_text_3 = get_field('sensibilisation_text_3');
 $sensibilisation_link_3 = get_field('sensibilisation_link_3');
 $sensibilisation_more = get_field('sensibilisation_more');
 ?>
-
+<?php
+$query = new WP_Query([
+    'post_type'      => 'sensibilisation', // adapte au nom réel de ton type de publication
+    'posts_per_page' => 3,
+]);
+?>
 <?php get_header(); ?>
 
     <div class="all-buttons">
@@ -167,56 +172,31 @@ $sensibilisation_more = get_field('sensibilisation_more');
         </section>
         <!-- Sensibilisation -->
         <section class="home-plai__section home-plai__section--sensibilisations">
-            <?php if ($sensibilisations): ?>
-                <h2 class="home-plai__title"><?= $sensibilisations ?></h2>
-            <?php endif; ?>
+            <h2 class="home-plai__title">Mes sensibilisations</h2>
 
             <ul class="home-plai__list">
+                <?php $position = 1; ?>
+                <?php if ($query->have_posts()):
+                    while ($query->have_posts()): $query->the_post();
+                        $trouble = get_field('trouble');
+                        ?>
+                        <li class="home-plai__list-item project__container" itemscope
+                            itemtype="https://schema.org/CreativeWork"
+                            itemprop="itemListElement">
 
-                <?php if ($sensibilisation_text_1): ?>
-                <li class="home-plai__list-item">
-                    <?= $sensibilisation_text_1 ?>
-                    <?php endif; ?>
+                            <meta itemprop="position" content="<?= $position++ ?>">
 
-                    <?php if ($sensibilisation_link_1): ?>
-                        <a class="home-plai__link" href="<?= $sensibilisation_link_1['url'] ?>">
-                            <?= $sensibilisation_link_1['title'] ?>
-                        </a>
-                    <?php endif; ?>
-                </li>
-
-                <?php if ($sensibilisation_text_2): ?>
-                <li class="home-plai__list-item">
-                    <?= $sensibilisation_text_2 ?>
-                    <?php endif; ?>
-
-                    <?php if ($sensibilisation_link_2): ?>
-                        <a class="home-plai__link" href="<?= $sensibilisation_link_2['url'] ?>">
-                            <?= $sensibilisation_link_2['title'] ?>
-                        </a>
-                    <?php endif; ?>
-                </li>
-
-                <?php if ($sensibilisation_text_3): ?>
-                <li class="home-plai__list-item">
-                    <?= $sensibilisation_text_3 ?>
-                    <?php endif; ?>
-
-                    <?php if ($sensibilisation_link_3): ?>
-                        <a class="home-plai__link" href="<?= $sensibilisation_link_3['url'] ?>">
-                            <?= $sensibilisation_link_3['title'] ?>
-                        </a>
-                    <?php endif; ?>
-                </li>
-            </ul>
-            <p>
-                <?php if ($sensibilisation_more): ?>
-                    <a class="home-plai__link" href="<?= $sensibilisation_more['url'] ?>">
-                        <?= $sensibilisation_more['title'] ?>
-                    </a>
+                            <?php if ($trouble): ?>
+                                <a class="home-plai__link" href="<?= get_permalink() ?>" itemprop="url">
+                                    <h3 class="project__title" itemprop="name"><?= $trouble ?></h3>
+                                </a>
+                            <?php endif; ?>
+                        </li>
+                    <?php endwhile; ?>
                 <?php endif; ?>
-            </p>
+            </ul>
         </section>
+        <?php wp_reset_postdata(); ?>
 
     </div>
 <?php get_footer(); ?>
