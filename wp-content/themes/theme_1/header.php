@@ -27,7 +27,6 @@
     <meta property="og:url" content="https://plai.be">
 </head>
 <body>
-<h1 class="sro"><?= get_the_title() ?></h1>
 
 
 

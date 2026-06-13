@@ -56,8 +56,11 @@ function register_sensibilisation_cpt() {
 }
 add_action('init', 'register_sensibilisation_cpt');
 
-
-
-
+function remove_admin_menus(): void {
+    remove_menu_page('edit.php');
+    remove_menu_page('edit-comments.php');
+    remove_menu_page('upload.php');
+}
+add_action('admin_menu', 'remove_admin_menus', 999);
 
 

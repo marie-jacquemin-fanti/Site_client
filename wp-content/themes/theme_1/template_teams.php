@@ -21,19 +21,19 @@ $title_page_principal = get_field('title_page_principal');
         <div class="equipe__membres">
 
             <div class="equipe__membre">
-                <div class="equipe__avatar">CM</div>
+                <div class="equipe__avatar" aria-hidden="true">CM</div>
                 <p class="equipe__nom">Claire Moreau</p>
                 <p class="equipe__specialite">Biodiversité</p>
             </div>
 
             <div class="equipe__membre">
-                <div class="equipe__avatar">TR</div>
+                <div class="equipe__avatar" aria-hidden="true">TR</div>
                 <p class="equipe__nom">Thomas Renard</p>
                 <p class="equipe__specialite">Gestion des sols</p>
             </div>
 
             <div class="equipe__membre">
-                <div class="equipe__avatar">LD</div>
+                <div class="equipe__avatar" aria-hidden="true">LD</div>
                 <p class="equipe__nom">Lucie Dubois</p>
                 <p class="equipe__specialite">Agriculture durable</p>
             </div>
@@ -48,19 +48,19 @@ $title_page_principal = get_field('title_page_principal');
         <div class="equipe__membres">
 
             <div class="equipe__membre">
-                <div class="equipe__avatar">ML</div>
+                <div class="equipe__avatar" aria-hidden="true">ML</div>
                 <p class="equipe__nom">Marc Lambert</p>
                 <p class="equipe__specialite">Médiation</p>
             </div>
 
             <div class="equipe__membre">
-                <div class="equipe__avatar">SP</div>
+                <div class="equipe__avatar" aria-hidden="true">SP</div>
                 <p class="equipe__nom">Sophie Perin</p>
                 <p class="equipe__specialite">Communication</p>
             </div>
 
             <div class="equipe__membre">
-                <div class="equipe__avatar">AB</div>
+                <div class="equipe__avatar" aria-hidden="true">AB</div>
                 <p class="equipe__nom">Antoine Boix</p>
                 <p class="equipe__specialite">Logistique</p>
             </div>

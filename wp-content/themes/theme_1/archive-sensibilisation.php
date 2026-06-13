@@ -23,7 +23,7 @@
 
                         <?php if ($trouble): ?>
                             <a class="home-plai__link" href="<?= get_permalink() ?>" itemprop="url">
-                                <h3 class="project__title" itemprop="name"><?= $trouble ?></h3>
+                                <h3 itemprop="name"><?= $trouble ?></h3>
                             </a>
                         <?php endif; ?>
                     </li>
