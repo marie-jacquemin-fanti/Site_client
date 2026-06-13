@@ -2,7 +2,7 @@
 <?php get_header() ?>
 <?php
 $deconnexion_button = get_field('deconnexion_button');
-
+$title_page_principal = get_field('title_page_principal');
 ?>
 <div class="all-buttons">
     <div class="back-buttons">
@@ -10,7 +10,7 @@ $deconnexion_button = get_field('deconnexion_button');
     </div>
 </div>
 
-    <h1>L'<span>équipe</span> Plai</h1>
+<?= $title_page_principal ?>
 
 <section class="equipes">
 

@@ -2,6 +2,7 @@
 <?php get_header() ?>
 <?php
 $deconnexion_button = get_field('deconnexion_button');
+$title_page_principal = get_field('title_page_principal');
 $sensibilisations = get_field('sensibilisations');
 $sensibilisation_title_1 = get_field('sensibilisation_title_1');
 $sensibilisation_text_1 = get_field('sensibilisation_text_1');
@@ -18,8 +19,7 @@ $sensibilisation_link_3 = get_field('sensibilisation_link_3');
         <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
     </div>
 </div>
-
-<h1>Les <span>Sensibilisation</span></h1>
+<?= $title_page_principal ?>
 <div class="home-plai">
     <section class="home-plai__section home-plai__section--sensibilisations">
         <?php if ($sensibilisations): ?>

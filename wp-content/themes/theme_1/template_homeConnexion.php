@@ -5,6 +5,8 @@ $deconnexion_button = get_field('deconnexion_button');
 
 $title_connexion_plai = get_field('title_connexion_plai');
 
+$title_page_principal = get_field('title_page_principal');
+
 $referent_title = get_field('referent_title');
 $referent_text = get_field('referent_text');
 $referent_link = get_field('referent_link');
@@ -52,7 +54,7 @@ $sensibilisation_more = get_field('sensibilisation_more');
         <?php endif; ?>
     </div>
 
-    <h1>Bienvenue Sur <span>Votre</span> Espace PLAI</h1>
+<?= $title_page_principal?>
 
     <!-- Référent -->
     <div class="home-plai">
