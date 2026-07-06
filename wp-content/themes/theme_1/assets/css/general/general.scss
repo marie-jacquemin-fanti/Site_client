@@ -27,29 +27,6 @@ html {
   }
 }
 
-
-.buttons {
-  background-color: #2D0C1F;
-  color: #F33EAA;
-  padding: 0.813rem 1.25rem;
-
-  font-family: var(--font-family-alberSansLight), sans-serif;
-  text-decoration: none;
-  margin: 0 1rem;
-  display: block;
-  width: fit-content;
-  font-size: 1.25rem;
-
-  transition: background-color 0.35s ease,
-  color 0.35s ease,
-  transform 0.2s ease;
-}
-
-.buttons:hover {
-  background-color: #F33EAA;
-  color: #2D0C1F;
-}
-
 .all-buttons {
   display: flex;
   background-color: var(--color-dark-green-2);
@@ -98,5 +75,4 @@ html {
     color: var(--color-white);
     letter-spacing: 1px;
   }
-  
 }
