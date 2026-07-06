@@ -35,44 +35,4 @@ html {
 }
 
 
-@media screen and (min-width: 1024px) {
-  h1 {
-    font-family: var(--font-family-funnelSans), sans-serif;
-    font-weight: lighter;
-    font-size: 6.25rem;
-    background-color: var(--color-dark-green);
-    padding: 7.5rem 11.438rem;
-    text-align: center;
-    text-transform: capitalize;
-    color: var(--color-white);
-    letter-spacing: 1px;
-  }
-}
 
-@media screen and (max-width: 1024px) and (min-width: 600px) {
-  h1 {
-    font-family: var(--font-family-funnelSans), sans-serif;
-    font-weight: lighter;
-    font-size: 5rem;
-    background-color: var(--color-dark-green);
-    padding: 3rem 3rem;
-    text-align: center;
-    text-transform: capitalize;
-    color: var(--color-white);
-    letter-spacing: 1px;
-  }
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-family: var(--font-family-funnelSans), sans-serif;
-    font-weight: lighter;
-    font-size: 2.5rem;
-    background-color: var(--color-dark-green);
-    padding: 3rem 3rem;
-    text-align: center;
-    text-transform: capitalize;
-    color: var(--color-white);
-    letter-spacing: 1px;
-  }
-}
