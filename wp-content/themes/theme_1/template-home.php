@@ -55,8 +55,14 @@ $third_number_second_section = get_field("third_number_second_section");
         <a class="buttons" href="<?= $button_identification['url'] ?>"><?= $button_identification['title'] ?></a>
     </div>
 
-    <?= $title_page_principal ?>
-
+<div class="hero-banner__content">
+    <div class="hero-banner__title">
+        <?= $title_page_principal ?>
+    </div>
+    <div >
+        <img class="hero-banner__image" src="<?= get_template_directory_uri() ?>/assets/images/girl.webp" alt="Une écolière avec le pouce en l'air">
+    </div>
+</div>
 
     <div class="missions">
         <section class="mission">
