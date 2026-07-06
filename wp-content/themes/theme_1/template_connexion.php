@@ -3,6 +3,7 @@
 
 <?php
 $deconnexion_button = get_field('deconnexion_button');
+$title_page_principal = get_field('title_page_principal');
 
 $identification_acces = get_field('identification_acces');
 $scolaire_mail = get_field('scolaire_mail');
@@ -14,7 +15,7 @@ $scolaire_mail = get_field('scolaire_mail');
         </div>
     </div>
 
-        <h1>Demande d'<span>accée</span></h1>
+    <?= $title_page_principal ?>
 
     <p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la premier fois
         une vérification

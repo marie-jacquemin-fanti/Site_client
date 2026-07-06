@@ -4,7 +4,7 @@ $referent_name = get_field('referent_name');
 $referent_phone = get_field('referent_phone');
 $referent_mail = get_field('referent_mail');
 $deconnexion_button = get_field('deconnexion_button');
-
+$title_page_principal = get_field('title_page_principal');
 ?>
 <?php get_header(); ?>
 <div class="all-buttons">
@@ -13,7 +13,8 @@ $deconnexion_button = get_field('deconnexion_button');
     </div>
 </div>
 
-    <h1><span>Référent</span> de votre école</h1>
+<?= $title_page_principal ?>
+
 
 <!-- Référent -->
 <div class="home-plai">

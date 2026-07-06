@@ -6,6 +6,8 @@
 $button_falc = get_field('button_falc');
 $button_identification = get_field('button_identification');
 
+$title_page_principal = get_field('title_page_principal');
+
 $title_first_mission = get_field("title_first_mission");
 $text_first_mission = get_field("text_first_mission");
 $number_first_mission = get_field("number_first_mission");
@@ -49,11 +51,12 @@ $third_number_second_section = get_field("third_number_second_section");
 ?>
 
     <div class="all-buttons">
-            <a class="buttons" href="<?= $button_falc['url'] ?>"><?= $button_falc['title'] ?></a>
-            <a class="buttons" href="<?= $button_identification['url'] ?>"><?= $button_identification['title'] ?></a>
+        <a class="buttons" href="<?= $button_falc['url'] ?>"><?= $button_falc['title'] ?></a>
+        <a class="buttons" href="<?= $button_identification['url'] ?>"><?= $button_identification['title'] ?></a>
     </div>
 
-    <h1>Pôle Liègeois D’<span>accompagnement</span> Vers Une École Inclusive</h1>
+    <?= $title_page_principal ?>
+
 
     <div class="missions">
         <section class="mission">

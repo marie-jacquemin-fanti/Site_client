@@ -2,6 +2,7 @@
 <?php get_header() ?>
 <?php
 $deconnexion_button = get_field('deconnexion_button');
+$title_page_principal = get_field('title_page_principal');
 
 $identification = get_field('identification');
 $whitout_scolaire_mail = get_field('whitout_scolaire_mail');
@@ -13,7 +14,7 @@ $scolaire_mail = get_field('scolaire_mail');
         <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
     </div>
 </div>
-    <h1>S'<span>identifier</span></h1>
+<?= $title_page_principal ?>
 <p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la première fois une
     vérification sera
     effectuer avant de pouvoir y accéder.</p>
