@@ -1,0 +1,134 @@
+.home-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .section__container {
+    background-image: url("../../../assets/images/backgroundImage.webp");
+    padding: 0 15rem 8rem;
+  }
+
+  .section__contents {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: stretch;
+    position: relative;
+    width: 100%;
+  }
+
+  .icon--question{
+    position: absolute;
+    background-color:var(--color-pink);
+    padding: 5rem 5rem 15rem 5rem;
+    border-radius: 0 0 120px 120px;
+    top: -0.5rem;
+    right: 55rem;
+    z-index: 2;
+  }
+
+  .section__content {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 5rem 0 5rem 25rem;
+    color: var(--color-white);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .section__title {
+    font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 2.188rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .section__container {
+    background-image: url("../../../assets/images/backgroundImage.webp");
+    padding: 0 3rem 6rem;
+  }
+
+  .section__contents {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .icon--question {
+    position: absolute;
+    background-color: var(--color-pink);
+    padding: 2rem 2rem 6rem 2rem;
+    border-radius: 0 0 80px 80px;
+    top: -0.5rem;
+    right: 2rem;
+    z-index: 2;
+    /* réduit légèrement la taille visuelle du SVG */
+    width: 140px;
+    height: 126px;
+  }
+
+  .section__content {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 3rem 8rem 3rem 1.5rem;
+    color: var(--color-white);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .section__title {
+    font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section__container {
+    background-image: url("../../../assets/images/backgroundImage.webp");
+    padding: 0 3rem 6rem;
+  }
+
+  .section__contents {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .icon--question {
+    position: absolute;
+    background-color: var(--color-pink);
+    padding: 2rem 2rem 6rem 2rem;
+    border-radius: 0 0 80px 80px;
+    top: -0.5rem;
+    right: 2rem;
+    z-index: 2;
+    /* réduit légèrement la taille visuelle du SVG */
+    width: 140px;
+    height: 126px;
+  }
+
+  .section__content {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 3rem 8rem 3rem 1.5rem;
+    color: var(--color-white);
+    text-align: center;
+    z-index: 1;
+  }
+
+  .section__title {
+    font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+  }
+}
