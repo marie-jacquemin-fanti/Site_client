@@ -1,3 +1,5 @@
+
+
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -8,10 +10,7 @@ input[type=number] {
   margin: 0 2rem;
 }
 
-.form__container {
-  display: flex;
-  justify-content: center;
-}
+
 
 .form-button_valid{
   background-color: #F33EAA;
@@ -39,23 +38,18 @@ input[type=number] {
 
 
 @media screen and (min-width: 1024px) {
-  /*.body-form {
-    background-image: url("/wp-content/themes/theme_1/public/backgroundImage.png");
-    min-height: 400px;
-    background-size: cover;
-    background-position: center;
-  }*/
-  .form__text {
-    font-family: var(--font-family-arial), sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.9rem;
-    color: #222;
-    padding-top: 4rem;
-    text-align: center;
-    margin: 0 auto;
-    width: 55%;
+  .title__content{
+    position: relative;
+    display: flex;
+    background-image: url("../../../assets/images/backgroundImage.webp");
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 3rem;
   }
+
   .form {
+    background-color: var(--color-yellow-light);
     padding: 3rem;
     max-width: 55%;
     margin: 0 auto;
@@ -65,6 +59,15 @@ input[type=number] {
       flex-direction: column;
     }
   }
+
+  .form__text {
+    font-family: var(--font-family-arial), sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    color: #222;
+    padding-top: 4rem;
+  }
+
   .form-buttons {
     display: flex;
     justify-content: space-around;

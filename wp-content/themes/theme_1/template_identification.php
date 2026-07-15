@@ -14,12 +14,15 @@ $scolaire_mail = get_field('scolaire_mail');
         <a class="buttons" href="<?= $deconnexion_button['url'] ?>"><?= $deconnexion_button['title'] ?></a>
     </div>
 </div>
-<?= $title_page_principal ?>
-<p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la première fois une
-    vérification sera
-    effectuer avant de pouvoir y accéder.</p>
+    <div class="title__content">
+        <?= $title_page_principal ?>
+    </div>
 
 <form class="form" action="<?= admin_url('admin-post.php'); ?>" method="POST">
+    <p class="form__text">Les enseignants ou membre de l'équipe PLAI peuvent ce connecter ici. Si c'est la première fois une
+        vérification sera
+        effectuer avant de pouvoir y accéder.</p>
+
     <div class="form__group">
         <?php if ($fase_number_identification): ?>
             <label class="form__label" for="fase"><?= $fase_number_identification ?></label>
@@ -29,7 +32,7 @@ $scolaire_mail = get_field('scolaire_mail');
     </div>
 
     <div class="form__group">
-        <?php if ($fase_number_identification): ?>
+        <?php if ($scolaire_mail): ?>
             <label class="form__label" for="email"><?= $scolaire_mail ?></label>
         <?php endif; ?>
         <input class="form__input" type="email" id="email" name="email" value="" placeholder="Ex : jeandumont@heple.be"
@@ -37,10 +40,10 @@ $scolaire_mail = get_field('scolaire_mail');
     </div>
     <div class="form-buttons">
         <?php if ($identification): ?>
-            <a class="form-button_valid" href="<?= $identification['url'] ?>"><?= $identification['title'] ?></a>
+            <button type="submit" class="form-button_valid"><?= $identification['title'] ?></button>
         <?php endif; ?>
         <?php if ($whitout_scolaire_mail): ?>
-            <a class="form-button"
+            <a class="buttons__bis"
                href="<?= $whitout_scolaire_mail['url'] ?>"><?= $whitout_scolaire_mail['title'] ?></a>
         <?php endif; ?>
     </div>
